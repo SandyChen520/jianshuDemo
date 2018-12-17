@@ -1,0 +1,14 @@
+<ul class="node-list">
+  <li *ngFor="let note of noteList">
+    <a href="" class="wrap-img"><img src="https://upload-images.jianshu.io/upload_images/12240181-beac8603e07c7814?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240" alt=""></a>
+    <div class="content have-img">
+      <a class="title" routerLink="/detail/{{note.id}}">{{note.title}}</a>
+      <p>{{note.content}}</p>
+      <div class="meta">
+        <a href="" class="nicknam">作者</a>
+        <a href=""><i class="icon iconfont icon-xinxi"></i>1</a>
+        <span><i class="icon iconfont icon-dianzan"></i>12</span>
+      </div>
+    </div>
+  </li>
+</ul>

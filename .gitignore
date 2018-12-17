@@ -34,10 +34,10 @@ build/Release
 
 # Dependency directories
 node_modules/
-angular-app/node_modules/
-angular-app/dist
-angular-app/tmp
-angular-app/out-tsc
+angular-app1/node_modules/
+angular-app1/dist/
+angular-app1/tmp/
+angular-app1/out-tsc/
 jspm_packages/
 
 # TypeScript v1 declaration files
