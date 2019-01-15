@@ -1,0 +1,24 @@
+server:
+  tomcat:
+    uri-encoding: utf-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8088
+  servlet:
+    context-path: /demo
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+
+
+  activemq:
+    broker-url: tcp://wzjshuye.cn:61616
+    in-memory: true
+    pool:
+      enabled: false
+    packages:
+      trust-all: true
+
+

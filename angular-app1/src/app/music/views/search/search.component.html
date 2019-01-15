@@ -1,0 +1,18 @@
+<h1>search</h1>
+<p>
+  <input type="text" #newquery [value]="query" (keydown.enter)="submit(newquery.value)">
+  <button (click)="submit(newquery.value)">search</button>
+</p>
+<div *ngIf="searchResult">
+  <div *ngIf="!searchResult.length">no tracks were found with the term '{{query}}'</div>
+  <div *ngIf="searchResult.length >0">
+    <h1>result</h1>
+    <ul>
+      <li *ngFor="let item of searchResult">
+        {{item.id}}
+        <a [routerLink]="['/track', item.id]">{{item.title}}</a>
+        <!-- <a routerLink="/track">{{item.title}}</a> -->
+      </li>
+    </ul>
+  </div>
+</div>

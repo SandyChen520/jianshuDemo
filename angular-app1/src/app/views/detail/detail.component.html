@@ -1,6 +1,6 @@
 <div class="container">
   <div class="detail">
-    <div class="title">标题</div>
+    <div class="title">{{noteDetail.title}}</div>
     <div class="author clearfix">
       <a href="" class="avatar"><img src="https://upload.jianshu.io/users/upload_avatars/13317307/77a6fce7-92f4-48b7-bf7f-4f54791475b5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt=""></a>
       <div class="info">
@@ -33,7 +33,7 @@
       <div class="signature">签名</div>
     </div>
     <div class="bottom">
-      <div class="like">喜欢&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20</div>
+      <div class="like" (click)="handleLike()" [class.liked]="isLike">喜欢&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{likeNum}}</div>
     </div>
     <app-comment-list></app-comment-list>
   </div>

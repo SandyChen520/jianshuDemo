@@ -1,0 +1,36 @@
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="">test</label>
+      <input type="text" class="form-control" name="test" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="">名称</label>
+      <input type="text" class="form-control" #title>
+    </div>
+    <div class="form-group">
+      <label for="">内容</label>
+      <textarea class="form-control" #content></textarea>
+    </div>
+    <div class="btn btn-default" (click)="addNote(title, content)">提交</div>
+    <button type="submit">submit</button>
+  </form>
+  <h2>使用formGroup示例</h2>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <div class="form-group">
+      <label for="">test</label>
+      <input type="text" class="form-control" name="test1" [formControl]="myForm.controls['test1']">
+    </div>
+    <div *ngIf="!myForm.controls['test1'].valid">test is invild</div>
+    <div *ngIf="myForm.controls['test1'].hasError('invalidTest')">test is required 123开头</div>
+    
+    <div class="btn btn-default" (click)="addNote(title, content)">提交</div>
+    <button type="submit">submit</button>
+  </form>
+  <h2>使用http</h2>
+  <div>
+    <button (click)="makeRequest()">make request</button>
+    <div *ngIf="loading">loading</div>
+    <pre>{{data | json}}</pre>
+  </div>
+</div>
